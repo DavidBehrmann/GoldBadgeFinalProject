@@ -1,0 +1,6 @@
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesREPO\bin\Debug\BadgesREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesREPO\bin\Debug\BadgesREPO.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesREPO\obj\Debug\BadgesREPO.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesREPO\obj\Debug\BadgesREPO.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesREPO\obj\Debug\BadgesREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesREPO\obj\Debug\BadgesREPO.pdb

@@ -1,0 +1,2 @@
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\obj\Debug\Cafe.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\obj\Debug\Cafe.csproj.CoreCompileInputs.cache

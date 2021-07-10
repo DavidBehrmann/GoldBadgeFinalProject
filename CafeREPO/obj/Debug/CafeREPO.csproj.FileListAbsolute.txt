@@ -1,0 +1,6 @@
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\CafeREPO\bin\Debug\CafeREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\CafeREPO\bin\Debug\CafeREPO.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\CafeREPO\obj\Debug\CafeREPO.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\CafeREPO\obj\Debug\CafeREPO.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\CafeREPO\obj\Debug\CafeREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\CafeREPO\obj\Debug\CafeREPO.pdb

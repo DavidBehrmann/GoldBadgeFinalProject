@@ -1,0 +1,6 @@
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsREPO\bin\Debug\OutingsREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsREPO\bin\Debug\OutingsREPO.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsREPO\obj\Debug\OutingsREPO.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsREPO\obj\Debug\OutingsREPO.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsREPO\obj\Debug\OutingsREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsREPO\obj\Debug\OutingsREPO.pdb
