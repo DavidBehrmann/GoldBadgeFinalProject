@@ -1,2 +1,10 @@
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\obj\Debug\Cafe.csproj.AssemblyReference.cache
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\bin\Debug\Cafe.exe.config
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\bin\Debug\Cafe.exe
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\bin\Debug\Cafe.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\bin\Debug\CafeREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\bin\Debug\CafeREPO.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\obj\Debug\Cafe.csproj.CopyComplete
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\obj\Debug\Cafe.exe
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Cafe\obj\Debug\Cafe.pdb
