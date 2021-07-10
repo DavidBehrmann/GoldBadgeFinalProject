@@ -21,9 +21,9 @@ namespace CafeREPO
             return _menuList;
         }
         //Delete menu items
-        public void RemoveItemsFromMenu()
+        public bool RemoveItemsFromMenu(CafePoco menuItem)
         {
-
+            return _menuList.Remove(menuItem);
         }
 
     }

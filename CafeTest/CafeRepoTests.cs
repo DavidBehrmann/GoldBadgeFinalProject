@@ -8,7 +8,7 @@ namespace CafeTest
     public class CafeRepoTests
     {
         [TestMethod]
-        public void CreateMenuItem_ShouldAddToMenuList()
+        public void CreateMenuItem_AddingMenuItemToList_ShouldAddToMenuList()
         {
             //arrange
             var cafeRepo = new CafeRepo();
@@ -21,6 +21,31 @@ namespace CafeTest
 
             //assert
             Assert.AreEqual(menuCountBeforeAdd, countAfterAdd - 1);
+        }
+        [TestMethod]
+        public void ReadListOfMenuItems_ReadingMenuList_ReturnsList()
+        {
+            //arrange
+            var cafeRepo = new CafeRepo();
+
+            //act
+            var result = cafeRepo.ReadListOfMenuItems();
+
+            //assert
+            CollectionAssert.AllItemsAreUnique(result);
+
+        }
+        [TestMethod]
+        public void RemoveItemsFromMenu_DeletingMenuItem_ListCountReturnsOneLess()
+        {
+
+            var cafeRepo = new CafeRepo();
+            var itemToBeDeleted = new CafePoco();
+            cafeRepo.CreateMenuItem(itemToBeDeleted);
+
+            cafeRepo.RemoveItemsFromMenu(itemToBeDeleted);
+
+            CollectionAssert.DoesNotContain(cafeRepo._menuList, itemToBeDeleted);
         }
     }
 }
