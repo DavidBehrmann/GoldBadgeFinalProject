@@ -47,7 +47,7 @@ namespace Cafe
                     CreateNewMenuItem();
                     break;
                 case "2":
-                    DisplayMenu();
+                    DisplayFullMenu();
                     break;
                 case "3":
                     DeleteMenuItem();
@@ -60,32 +60,70 @@ namespace Cafe
                         "Please enter a number from the Main Menu.\n" +
                         "Press 'Enter' to continue.");
                     Console.ReadKey();
-                    MainMenu();
+                    
                     return;
             }
         }
 
         private void CreateNewMenuItem()
         {
+            Console.Clear();
+            Console.WriteLine("You are creating a new meal for the menu.\n" +
+                "Enter the meal's number. (i.e. 5)");
+            int mealNumber = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Enter the meal's name.");
+            string mealName = Console.ReadLine();
+
+            Console.WriteLine("Enter a description of the meal.");
+            string description = Console.ReadLine();
+
+            Console.WriteLine("Enter a list of ingredients.");
+            string ingredients = Console.ReadLine();
+
+            Console.WriteLine("Enter the price of the meal.");
+            double price = double.Parse(Console.ReadLine());
+            CafePoco menuItem = new CafePoco(mealNumber, mealName, description, ingredients, price);
+
+            _cafeRepo.CreateMenuItem(menuItem);
+            
+            PressEnterToReturnToMainMenu();
         }
-        private void DisplayMenu()
+        private void DisplayFullMenu()
         {
-
+            Console.Clear();
+            List<CafePoco> menuList = _cafeRepo.ReadListOfMenuItems();
+            foreach(CafePoco menuItem in menuList)
+            {
+                DisplayMenuItem(menuItem);
+            }
+            PressEnterToReturnToMainMenu();
+        }
+        private void DisplayMenuItem(CafePoco menuItem)
+        {
+            
+            Console.WriteLine($"Your menu has the following items:\n" +
+                $"Meal Number: {menuItem.MealNumber}\n" +
+                $"Meal Name: {menuItem.MealName}\n" +
+                $"Description: {menuItem.Description}\n" +
+                $"Ingredients List: {menuItem.Ingredients}\n" +
+                $"Meal Price: {menuItem.Price}\n");
         }
 
         private void DeleteMenuItem()
         {
+            Console.WriteLine("Enter meal number to be deleted from the menu.");
 
+            _cafeRepo.DeleteMealByNumber(int.Parse(Console.ReadLine()));
+
+            PressEnterToReturnToMainMenu();
         }
-        //Create new menu items
 
-
-        //Display current menu
-
-
-        //Delete Menu items
-
-
+        private void PressEnterToReturnToMainMenu()
+        {
+            Console.WriteLine("Press enter to return to Main Menu.");
+            Console.ReadKey();
+            MainMenu();
+        }
     }
 }

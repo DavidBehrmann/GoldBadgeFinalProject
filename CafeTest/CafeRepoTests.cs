@@ -33,8 +33,31 @@ namespace CafeTest
 
             //assert
             CollectionAssert.AllItemsAreUnique(result);
-
         }
+
+        [TestMethod]
+        public void GetMealByNumber_IfMealNumberMatches_ReturnItem()
+        {
+            var cafeRepo = new CafeRepo();
+            var menuItem = new CafePoco(1, "BLT", "Bacon, Lettuc and Tomato on toast", "Hickory Smoked Bacon, Vine Ripened Tomatoes, Romaine Lettuce, Whole Wheat Bread, Mayonaise, salt, pepper", 7.99);
+
+            cafeRepo.CreateMenuItem(menuItem);
+            var result = cafeRepo.GetMealByNumber(1);
+
+            Assert.AreEqual(menuItem, result);
+        }
+        [TestMethod]
+        public void GetMealByNumber_IfMealNumberNotFound_ReturnNull()
+        {
+            var cafeRepo = new CafeRepo();
+            var menuItem = new CafePoco(1, "BLT", "Bacon, Lettuc and Tomato on toast", "Hickory Smoked Bacon, Vine Ripened Tomatoes, Romaine Lettuce, Whole Wheat Bread, Mayonaise, salt, pepper", 7.99);
+
+            cafeRepo.CreateMenuItem(menuItem);
+            var result = cafeRepo.GetMealByNumber(2);
+
+            Assert.AreNotEqual(menuItem, result);
+        }
+
         [TestMethod]
         public void RemoveItemsFromMenu_DeletingMenuItem_ListCountReturnsOneLess()
         {
@@ -47,5 +70,12 @@ namespace CafeTest
 
             CollectionAssert.DoesNotContain(cafeRepo._menuList, itemToBeDeleted);
         }
+        [TestMethod]
+        public void DeleteMealByNumber_MealNumberGiven_MealNumberDeleted()
+        {
+
+        }
     }
+    
+
 }
