@@ -12,3 +12,5 @@ C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadge
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesTest\obj\Debug\BadgesTest.csproj.CopyComplete
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesTest\obj\Debug\BadgesTest.dll
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesTest\obj\Debug\BadgesTest.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesTest\bin\Debug\BadgesREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\BadgesTest\bin\Debug\BadgesREPO.pdb
