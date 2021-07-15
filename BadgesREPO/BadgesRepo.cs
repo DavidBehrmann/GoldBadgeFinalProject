@@ -8,27 +8,26 @@ namespace BadgesREPO
 {
     public class BadgesRepo
     {
-        public Dictionary<int, List<string>> badgeDictionary = new Dictionary<int, List<string>>();
-        public List<string> doorList = new List<string> { "A1", "A2", "A3", "B1", "B17", "C32" };
+        public Dictionary<int,string> badgeDictionary = new Dictionary<int, string>();
+        //public List<string> doorList = new List<string> { "A1", "A2", "A3", "B1", "B17", "C32" };
 
         //create new badge
-        public void CreateNewBadge(Badge NewBadge)
+        public void CreateNewBadge(int badgeID, string doorAccess)
         {
-            Badge newBadge = NewBadge;
-            badgeDictionary.Add(newBadge.badgeID, null);
+            badgeDictionary.Add(badgeID, doorAccess);
         }
 
         //update doors on an existing badge
 
 
-        //paused on this for the night
-        /*public void UpdateDoorsOnBadge(int badgeID)
+        
+        public void AddDoorsOnBadge(int badgeID)
         {
-            badgeDictionary[badgeID] = 
-        }*/
+            
+        }
 
         //show a list with all badge numbers and door access
-        public Dictionary<int, List<string>> DisplayBadgeDictionary()
+        public Dictionary<int, string> DisplayBadgeDictionary()
         {
             return badgeDictionary;
         }
@@ -52,7 +51,7 @@ namespace BadgesREPO
 
 
 
-        public void AddToBadgeDictionary(int BadgeID, string DoorList)
+       /* public void AddToBadgeDictionary(int BadgeID, string DoorList)
         {
             if (this.badgeDictionary.ContainsKey(BadgeID))
             {
@@ -68,7 +67,7 @@ namespace BadgesREPO
                 doorList.Add(DoorList);
                 this.badgeDictionary.Add(BadgeID, doorList);
             }
-        }
+        }*/
 
 
 

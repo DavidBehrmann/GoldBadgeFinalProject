@@ -8,13 +8,12 @@ namespace BadgesTest
     public class BadgesUnitTests
     {
         [TestMethod]
-        public void CreateNewBadge_NewBadgeCreated_ShouldGiveNewBadgeWithNullDoors()
+        public void CreateNewBadge_NewBadgeCreated_AddNewBadgeToDictionary()
         {
             var badgeRepo = new BadgesRepo();
-            var newBadge = new Badge(1234);
             int dictionaryCountBeforeAdd = badgeRepo.badgeDictionary.Count;
 
-            badgeRepo.CreateNewBadge(newBadge);
+            badgeRepo.CreateNewBadge(1234, "A1, A2");
             int dictionaryCountAfterAdd = badgeRepo.badgeDictionary.Count;
 
             Assert.AreEqual(dictionaryCountBeforeAdd, dictionaryCountAfterAdd - 1);

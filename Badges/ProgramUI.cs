@@ -71,18 +71,22 @@ namespace Badges
         {
             Console.Clear();
             Console.WriteLine("Badge#  ||  Door Access:");
-            Dictionary<int, List<string>> badgeDictionary = _badgesRepo.DisplayBadgeDictionary();
-            foreach (KeyValuePair<int, List<string>> badge in badgeDictionary)
+            Dictionary<int, string> badgeDictionary = _badgesRepo.DisplayBadgeDictionary();
+            foreach (KeyValuePair<int, string> badge in badgeDictionary)
             {
                 badgeDictionary.Select(i => $"{i.Key}  ||  {i.Value}").ToList().ForEach(Console.WriteLine);
                 
             }
             PressEnterToReturnToMainMenu();
         }
+
+
         
         private void EditDoorsOnBadge()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Please enter the badge ID you would like to edit.");
+
         }
 
         private void AddNewBadge()
