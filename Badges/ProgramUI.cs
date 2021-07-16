@@ -9,15 +9,15 @@ namespace Badges
 {
     class ProgramUI
     {
-        BadgesRepo _badgesRepo = new BadgesRepo();
+        /*BadgesRepo _badgesRepo = new BadgesRepo();
         private bool _isRunning = true;
         public void Start()
         {
             RunMenu();
         }
-        /*string path = @"C: \Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Badges\DoorList.txt";
+        *//*string path = @"C: \Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Badges\DoorList.txt";
         string text = System.IO.File.ReadAllText(path);
-        List<string> doorList = text.Split(',').ToList();*/
+        List<string> doorList = text.Split(',').ToList();*//*
 
         public void RunMenu()
         {
@@ -98,6 +98,6 @@ namespace Badges
             Console.WriteLine("Press enter to return to Main Menu.");
             Console.ReadKey();
             MainMenu();
-        }
+        }*/
     }
 }

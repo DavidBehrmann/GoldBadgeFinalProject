@@ -10,12 +10,12 @@ namespace BadgesREPO
 	{	
 		
 		public int badgeID { get; set; }
-        public string doorAccess { get; set; }
-        //public List<string> doorList { get; } = new List<string> { "A1", "A2", "A3", "B1", "B17", "C32"};
+        
+        public List<string> doorAccess { get; } = new List<string>;
 		
 		public Badge() { }
         
-        public Badge(int BadgeID, string DoorAccess)
+        public Badge(int BadgeID, List<string> DoorAccess)
 		{
 			badgeID = BadgeID;
 			doorAccess = DoorAccess;

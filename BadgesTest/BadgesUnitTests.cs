@@ -7,7 +7,7 @@ namespace BadgesTest
     [TestClass]
     public class BadgesUnitTests
     {
-        [TestMethod]
+        /*[TestMethod]
         public void CreateNewBadge_NewBadgeCreated_AddNewBadgeToDictionary()
         {
             var badgeRepo = new BadgesRepo();
@@ -23,9 +23,21 @@ namespace BadgesTest
         {
             var badgeRepo = new BadgesRepo();
 
-            var result = badgeRepo.DisplayBadgeDictionary();
+            badgeRepo.DisplayBadgeDictionary();
 
-            CollectionAssert.AllItemsAreNotNull(badgeRepo.badgeDictionary);
+            CollectionAssert.AllItemsAreUnique(badgeRepo.badgeDictionary);
         }
+        [TestMethod]
+        public void UpdateDoorsOnBadge_ChangedDoorAccessForBadge_DoorAccessIsUpdated()
+        {
+            var badgeRepo = new BadgesRepo();
+            badgeRepo.badgeDictionary.Add(Badge)
+            int badgeID = 1234;
+            string newDoorAccess = "A1, A2, A3";
+
+            badgeRepo.UpdateDoorsOnBadge(badgeID);
+
+
+        }*/
     }
 }

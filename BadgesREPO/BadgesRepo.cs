@@ -8,7 +8,7 @@ namespace BadgesREPO
 {
     public class BadgesRepo
     {
-        public Dictionary<int,string> badgeDictionary = new Dictionary<int, string>();
+        public Dictionary<int, string> badgeDictionary = new Dictionary<int, string>();
         //public List<string> doorList = new List<string> { "A1", "A2", "A3", "B1", "B17", "C32" };
 
         //create new badge
@@ -20,10 +20,18 @@ namespace BadgesREPO
         //update doors on an existing badge
 
 
-        
-        public void AddDoorsOnBadge(int badgeID)
+
+        public void UpdateDoorsOnBadge(int badgeID)
         {
-            
+            if (badgeDictionary.ContainsKey(badgeID))
+            {
+                Console.WriteLine("What doors should this badge have access to?");
+                string newDoorAccess = Console.ReadLine();
+                badgeDictionary[badgeID] = newDoorAccess;
+            }
+
+            Console.WriteLine("I'm sorry, that badge does not exist.");
+
         }
 
         //show a list with all badge numbers and door access
@@ -44,38 +52,6 @@ namespace BadgesREPO
         }
 
         //delete all doors form an existing badge
-        
-
-
-
-
-
-
-       /* public void AddToBadgeDictionary(int BadgeID, string DoorList)
-        {
-            if (this.badgeDictionary.ContainsKey(BadgeID))
-            {
-                List<string> doorList = this.badgeDictionary[BadgeID];
-                if (doorList.Contains(DoorList) == false)
-                {
-                    doorList.Add(DoorList);
-                }
-            }
-            else
-            {
-                List<string> doorList = new List<string>();
-                doorList.Add(DoorList);
-                this.badgeDictionary.Add(BadgeID, doorList);
-            }
-        }*/
-
-
-
-        /*IDictionary<int, string> badgeDictionary = new Dictionary<int, string>()
-        {
-            {1, "A1, A2, C5" },
-            {2, "A1, B2, C1" },
-        };*/
 
 
     }
