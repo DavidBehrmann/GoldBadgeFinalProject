@@ -8,6 +8,7 @@ namespace BadgesREPO
 {
     public class BadgesRepo
     {
+        public Badge badge = new Badge();
 
         public Dictionary<int, Badge> badgeDictionary = new Dictionary<int, Badge>();
 
@@ -43,13 +44,12 @@ namespace BadgesREPO
         {
             if (badgeDictionary.ContainsKey(badgeNum))
             {
-                badgeDictionary[badgeNum].doorAccess = new List<string>();
+                badgeDictionary[badgeNum].doorAccess.Clear();
                 Console.WriteLine("You have removed access to every door from this badge.");
             }
 
             Console.WriteLine("I'm sorry, that badge does not exist.");
             return null;
-            
         }
     }
 }
