@@ -67,7 +67,7 @@ namespace Badges
             }
         }
 
-        private void DisplayAllBadgesInDictionary()
+        public void DisplayAllBadgesInDictionary()
         {
             Console.Clear();
             Console.WriteLine("Badge#  ||  BadgeID  ||  Door Access:");
@@ -86,9 +86,11 @@ namespace Badges
         {
             string input = Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Please enter the badge ID you would like to edit.");
+            Console.WriteLine("Please enter the badge number you would like to edit.");
             int badgeNum = int.Parse(Console.ReadLine());
             _badgesRepo.DisplayBadgeByID(badgeNum);
+            
+            //bug, if a null is returned the program still proceeds. Need program to return to main menu or ask for an ID again.
             bool editingDoors = true;
 
 
@@ -99,6 +101,7 @@ namespace Badges
                     "2. Remove door access\n" +
                     "3. Remove access to all doors.\n" +
                     "4. Nothing and return to Main Menu.\n");
+                input = Console.ReadLine();
                 while (input != "1" || input != "2" || input != "3" || input != "4")
                 {
                     Console.WriteLine("Please enter a number 1-4.");
@@ -160,43 +163,45 @@ namespace Badges
             List<string> doorAccess = new List<string>();
             while (addDoors)
             {
-                string input = Console.ReadLine().ToLower();
+
                 Console.WriteLine("Enter a door this badge has access to.");
                 doorAccess.Add(Console.ReadLine());
                 Console.WriteLine("Does this badge need access to more doors? y/n");
-                input = Console.ReadLine().ToLower();
-                while (input != "y" || input != "n")
+                string input = Console.ReadLine().ToLower();
+                //bug, not looping properly
+                while (input == "y" || input == "n")
                 {
-                    Console.WriteLine("Please enter y/n.");
-                    input = Console.ReadLine().ToLower();
+                    switch (input)
+                    {
+                        case "y":
+                            Console.WriteLine("Enter a door this badge has access to.");
+                            doorAccess.Add(Console.ReadLine());
+                            Console.WriteLine("Does this badge need access to more doors? y/n");
+                            input = Console.ReadLine().ToLower();
+                            break;
+                        case "n":
+                            addDoors = false;
+                            break;
+                    }
                 }
-                switch (input)
-                {
-                    case "y":
-                        Console.WriteLine("Enter a door this badge has access to.");
-                        doorAccess.Add(Console.ReadLine());
-                        Console.WriteLine("Does this badge need access to more doors? y/n");
-                        break;
-                    case "n":
-                        addDoors = false;
-                        break;
-                }
-                
+
             }
             return doorAccess;
-
+            //bug, method is inaccesable?
+            PressEnterToReturnToMainMenu();
         }
         public List<string> RemoveDoorAccess()
         {
             bool removeDoor = true;
             List<string> doorAccess = new List<string>();
+
             while (removeDoor)
             {
-                string input = Console.ReadLine().ToLower();
+
                 Console.WriteLine("Enter a door to remove access.");
                 doorAccess.Remove(Console.ReadLine());
                 Console.WriteLine("Do you want to remove more doors? y/n");
-                input = Console.ReadLine().ToLower();
+                string input = Console.ReadLine().ToLower();
                 while (input != "y" || input != "n")
                 {
                     Console.WriteLine("Please enter y/n.");
@@ -218,7 +223,7 @@ namespace Badges
             return doorAccess;
 
         }
-        private void PressEnterToReturnToMainMenu()
+        public void PressEnterToReturnToMainMenu()
         {
             Console.WriteLine("Press enter to return to Main Menu.");
             Console.ReadKey();
