@@ -123,7 +123,7 @@ namespace Cafe
         {
             Console.WriteLine("Press enter to return to Main Menu.");
             Console.ReadKey();
-            MainMenu();
+            RunMenu();
         }
     }
 }

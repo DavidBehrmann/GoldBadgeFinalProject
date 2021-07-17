@@ -82,22 +82,76 @@ namespace Badges
 
 
 
-        private void EditDoorsOnBadge()
+        public void EditDoorsOnBadge()
         {
+            string input = Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Please enter the badge ID you would like to edit.");
+            int badgeNum = int.Parse(Console.ReadLine());
+            _badgesRepo.DisplayBadgeByID(badgeNum);
+            bool editingDoors = true;
+
+
+            while (editingDoors)
+            {
+                Console.WriteLine("What would you like to do to this badge?\n" +
+                    "1. Add door access.\n" +
+                    "2. Remove door access\n" +
+                    "3. Remove access to all doors.\n" +
+                    "4. Nothing and return to Main Menu.\n");
+                while (input != "1" || input != "2" || input != "3" || input != "4")
+                {
+                    Console.WriteLine("Please enter a number 1-4.");
+                }
+                switch (input)
+                {
+                    case "1":
+                        CreateDoorAccessList();
+                        break;
+                    case "2":
+                        RemoveDoorAccess();
+                        break;
+                    case "3":
+                        Console.WriteLine("You are about to remove access to ALL doors on this badge. Do you wish to proceed? y/n");
+                        while (input != "y" || input != "n")
+                        {
+                            Console.WriteLine("Please enter y/n.");
+                            input = Console.ReadLine().ToLower();
+                        }
+                        switch (input)
+                        {
+                            case "y":
+                                _badgesRepo.DeleteAllDoorsOnABadge(badgeNum);
+                                break;
+                            case "n":
+                                break;
+                        }
+                        break;
+                    case "4":
+                        editingDoors = false;
+                        break;
+                }
+            }
+            PressEnterToReturnToMainMenu();
 
         }
 
-        private void AddNewBadge()
+        public void AddNewBadge()
         {
             Console.Clear();
+            Console.WriteLine("Please assign a number to this badge.\n" +
+                "(this is a reference number, not a badge ID number)");
+            int badgeNum = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Please enter a badge ID number.");
             int badgeID = int.Parse(Console.ReadLine());
 
             List<string> doorAccess = CreateDoorAccessList();
 
             Badge newBadge = new Badge(badgeID, doorAccess);
+
+            _badgesRepo.badgeDictionary.Add(badgeNum, newBadge);
+            PressEnterToReturnToMainMenu();
         }
 
         public List<string> CreateDoorAccessList()
@@ -132,11 +186,43 @@ namespace Badges
             return doorAccess;
 
         }
+        public List<string> RemoveDoorAccess()
+        {
+            bool removeDoor = true;
+            List<string> doorAccess = new List<string>();
+            while (removeDoor)
+            {
+                string input = Console.ReadLine().ToLower();
+                Console.WriteLine("Enter a door to remove access.");
+                doorAccess.Remove(Console.ReadLine());
+                Console.WriteLine("Do you want to remove more doors? y/n");
+                input = Console.ReadLine().ToLower();
+                while (input != "y" || input != "n")
+                {
+                    Console.WriteLine("Please enter y/n.");
+                    input = Console.ReadLine().ToLower();
+                }
+                switch (input)
+                {
+                    case "y":
+                        Console.WriteLine("Enter a door to remove access.");
+                        doorAccess.Remove(Console.ReadLine());
+                        Console.WriteLine("Do you want to remove more doors? y/n");
+                        break;
+                    case "n":
+                        removeDoor = false;
+                        break;
+                }
+
+            }
+            return doorAccess;
+
+        }
         private void PressEnterToReturnToMainMenu()
         {
             Console.WriteLine("Press enter to return to Main Menu.");
             Console.ReadKey();
-            MainMenu();
+            RunMenu();
         }
     }
 }

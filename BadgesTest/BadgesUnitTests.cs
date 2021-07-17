@@ -7,7 +7,7 @@ namespace BadgesTest
     [TestClass]
     public class BadgesUnitTests
     {
-        /*[TestMethod]
+        [TestMethod]
         public void CreateNewBadge_NewBadgeCreated_AddNewBadgeToDictionary()
         {
             var badgeRepo = new BadgesRepo();
@@ -38,6 +38,6 @@ namespace BadgesTest
             badgeRepo.UpdateDoorsOnBadge(badgeID);
 
 
-        }*/
+        }
     }
 }
