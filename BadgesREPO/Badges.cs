@@ -11,7 +11,7 @@ namespace BadgesREPO
 		
 		public int badgeID { get; set; }
         
-        public List<string> doorAccess { get; } = new List<string>;
+        public List<string> doorAccess { get; set; } = new List<string>;
 		
 		public Badge() { }
         

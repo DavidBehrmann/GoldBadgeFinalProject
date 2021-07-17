@@ -9,15 +9,15 @@ namespace Badges
 {
     class ProgramUI
     {
-        /*BadgesRepo _badgesRepo = new BadgesRepo();
+        BadgesRepo _badgesRepo = new BadgesRepo();
         private bool _isRunning = true;
         public void Start()
         {
             RunMenu();
         }
-        *//*string path = @"C: \Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Badges\DoorList.txt";
+        /*string path = @"C: \Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Badges\DoorList.txt";
         string text = System.IO.File.ReadAllText(path);
-        List<string> doorList = text.Split(',').ToList();*//*
+        List<string> doorList = text.Split(',').ToList();*/
 
         public void RunMenu()
         {
@@ -70,18 +70,18 @@ namespace Badges
         private void DisplayAllBadgesInDictionary()
         {
             Console.Clear();
-            Console.WriteLine("Badge#  ||  Door Access:");
-            Dictionary<int, string> badgeDictionary = _badgesRepo.DisplayBadgeDictionary();
-            foreach (KeyValuePair<int, string> badge in badgeDictionary)
+            Console.WriteLine("Badge#  ||  BadgeID  ||  Door Access:");
+            Dictionary<int, Badge> badgeDictionary = _badgesRepo.DisplayBadgeDictionary();
+            foreach (KeyValuePair<int, Badge> badge in badgeDictionary)
             {
                 badgeDictionary.Select(i => $"{i.Key}  ||  {i.Value}").ToList().ForEach(Console.WriteLine);
-                
+
             }
             PressEnterToReturnToMainMenu();
         }
 
 
-        
+
         private void EditDoorsOnBadge()
         {
             Console.Clear();
@@ -91,13 +91,52 @@ namespace Badges
 
         private void AddNewBadge()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Please enter a badge ID number.");
+            int badgeID = int.Parse(Console.ReadLine());
+
+            List<string> doorAccess = CreateDoorAccessList();
+
+            Badge newBadge = new Badge(badgeID, doorAccess);
+        }
+
+        public List<string> CreateDoorAccessList()
+        {
+            bool addDoors = true;
+            List<string> doorAccess = new List<string>();
+            while (addDoors)
+            {
+                string input = Console.ReadLine().ToLower();
+                Console.WriteLine("Enter a door this badge has access to.");
+                doorAccess.Add(Console.ReadLine());
+                Console.WriteLine("Does this badge need access to more doors? y/n");
+                input = Console.ReadLine().ToLower();
+                while (input != "y" || input != "n")
+                {
+                    Console.WriteLine("Please enter y/n.");
+                    input = Console.ReadLine().ToLower();
+                }
+                switch (input)
+                {
+                    case "y":
+                        Console.WriteLine("Enter a door this badge has access to.");
+                        doorAccess.Add(Console.ReadLine());
+                        Console.WriteLine("Does this badge need access to more doors? y/n");
+                        break;
+                    case "n":
+                        addDoors = false;
+                        break;
+                }
+                
+            }
+            return doorAccess;
+
         }
         private void PressEnterToReturnToMainMenu()
         {
             Console.WriteLine("Press enter to return to Main Menu.");
             Console.ReadKey();
             MainMenu();
-        }*/
+        }
     }
 }

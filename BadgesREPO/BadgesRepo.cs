@@ -8,51 +8,48 @@ namespace BadgesREPO
 {
     public class BadgesRepo
     {
-        public Dictionary<int, string> badgeDictionary = new Dictionary<int, string>();
-        //public List<string> doorList = new List<string> { "A1", "A2", "A3", "B1", "B17", "C32" };
+
+        public Dictionary<int, Badge> badgeDictionary = new Dictionary<int, Badge>();
 
         //create new badge
-        public void CreateNewBadge(int badgeID, string doorAccess)
+        public void CreateNewBadge(int badgeNum, Badge badge)
         {
-            badgeDictionary.Add(badgeID, doorAccess);
+            badgeDictionary.Add(badgeNum, badge);
         }
 
-        //update doors on an existing badge
 
-
-
-        public void UpdateDoorsOnBadge(int badgeID)
-        {
-            if (badgeDictionary.ContainsKey(badgeID))
-            {
-                Console.WriteLine("What doors should this badge have access to?");
-                string newDoorAccess = Console.ReadLine();
-                badgeDictionary[badgeID] = newDoorAccess;
-            }
-
-            Console.WriteLine("I'm sorry, that badge does not exist.");
-
-        }
 
         //show a list with all badge numbers and door access
-        public Dictionary<int, string> DisplayBadgeDictionary()
+        public Dictionary<int, Badge> DisplayBadgeDictionary()
         {
             return badgeDictionary;
         }
 
-        public int DisplayBadgeByID(int badgeID)
+        public Badge DisplayBadgeByID(int badgeNum)
         {
-            if (badgeDictionary.ContainsKey(badgeID))
+            
+            if (badgeDictionary.ContainsKey(badgeNum))
             {
-                return badgeID;
+                return badgeDictionary[badgeNum];
             }
 
             Console.WriteLine("I'm sorry, that badge does not exist.");
-            return 0;
+            return null;
         }
 
-        //delete all doors form an existing badge
+        //delete all doors from an existing badge
 
+        public Badge DeleteAllDoorsOnABadge(int badgeNum)
+        {
+            if (badgeDictionary.ContainsKey(badgeNum))
+            {
+                badgeDictionary[badgeNum].doorAccess = new List<string>();
+                Console.WriteLine("You have removed access to every door from this badge.");
+            }
 
+            Console.WriteLine("I'm sorry, that badge does not exist.");
+            return null;
+            
+        }
     }
 }
