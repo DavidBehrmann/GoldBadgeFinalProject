@@ -12,3 +12,5 @@ C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadge
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsTest\obj\Debug\OutingsTest.csproj.CopyComplete
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsTest\obj\Debug\OutingsTest.dll
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsTest\obj\Debug\OutingsTest.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsTest\bin\Debug\OutingsREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\OutingsTest\bin\Debug\OutingsREPO.pdb

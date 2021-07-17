@@ -10,6 +10,8 @@ namespace Outings
     {
         static void Main(string[] args)
         {
+            /*ProgramUI UI = new ProgramUI();
+            UI.Start();*/
         }
     }
 }

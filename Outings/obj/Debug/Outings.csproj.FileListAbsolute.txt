@@ -5,3 +5,6 @@ C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadge
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Outings\obj\Debug\Outings.csproj.CoreCompileInputs.cache
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Outings\obj\Debug\Outings.exe
 C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Outings\obj\Debug\Outings.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Outings\bin\Debug\OutingsREPO.dll
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Outings\bin\Debug\OutingsREPO.pdb
+C:\Users\david\Desktop\Software Development Course\ElevenFiftyProjects\GoldBadgeFinalProject\Cafe\Outings\obj\Debug\Outings.csproj.CopyComplete
