@@ -45,7 +45,7 @@ namespace OutingsTest
         }
 
         [TestMethod]
-        public void CombinedCostOfAllOutingsByType_()
+        public void CombinedCostOfAllOutingsByType_ReturnNotEqual()
         {
             var outingRepo = new OutingRepo();
             decimal totalSumBefore = 0;
