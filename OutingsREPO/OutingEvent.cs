@@ -13,21 +13,21 @@ namespace OutingsREPO
         AmusementPark,
         Concert
     }
-    public class Outings
+    public class OutingEvent
     {
-        public Outings() { }
-        public Outings(decimal totalCost) 
+        public OutingEvent() { }
+        public OutingEvent(decimal totalCost) 
         {
             TotalCost = totalCost;
         }
 
-        public Outings(EventType eventType, decimal totalCost)
+        public OutingEvent(EventType eventType, decimal totalCost)
         {
             EventType = eventType;
             TotalCost = totalCost;
         }
 
-        public Outings(EventType eventType, int numOfPeopleAttended, DateTime date, decimal totalCost, decimal totalCostPerPerson)
+        public OutingEvent(EventType eventType, int numOfPeopleAttended, DateTime date, decimal totalCost, decimal totalCostPerPerson)
         {
             EventType = eventType;
             NumOfPeopleAttended = numOfPeopleAttended;

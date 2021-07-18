@@ -8,14 +8,14 @@ namespace OutingsREPO
 {    
     public class OutingRepo
     {
-        public readonly List<Outings> _outingsList = new List<Outings>();
-        public Outings outing = new Outings();
+        public List<OutingEvent> _outingsList = new List<OutingEvent>();
+        public OutingEvent outing = new OutingEvent();
 
-        public void CreateOuting(Outings outing)
+        public void AddOutingToList(OutingEvent outing)
         {
             _outingsList.Add(outing);
         }
-        public List<Outings> ReadListOfOutings()
+        public List<OutingEvent> ReadListOfOutings()
         {
             return _outingsList;
         }
@@ -26,7 +26,7 @@ namespace OutingsREPO
         {
             decimal totalSum = 0;
             
-            foreach(Outings outing in _outingsList)
+            foreach(OutingEvent outing in _outingsList)
             {                
                 totalSum += outing.TotalCost;
             }
@@ -37,7 +37,7 @@ namespace OutingsREPO
         {
             decimal totalSumByEvent = 0;
 
-            foreach (Outings outing in _outingsList)
+            foreach (OutingEvent outing in _outingsList)
             {
                 if (outing.EventType == eventType)
                 totalSumByEvent += outing.TotalCost;

@@ -8,13 +8,13 @@ namespace OutingsTest
     public class OutingsUnitTest
     {
         [TestMethod]
-        public void CreateOuting_AddOutingToList()
+        public void AddOutingToList_AddOutingToList()
         {
             var outingRepo = new OutingRepo();
-            Outings outing = new Outings();
+            OutingEvent outing = new OutingEvent();
             int listBefore = outingRepo._outingsList.Count;
 
-            outingRepo.CreateOuting(outing);
+            outingRepo.AddOutingToList(outing);
             int listAfter = outingRepo._outingsList.Count;
 
             Assert.AreEqual(listBefore, listAfter - 1);
@@ -35,7 +35,7 @@ namespace OutingsTest
         {
             var outingRepo = new OutingRepo();
             decimal totalSumBefore = 0;
-            Outings outing = new Outings(12345);
+            OutingEvent outing = new OutingEvent(12345);
             outingRepo._outingsList.Add(outing);
 
             outingRepo.CombinedCostOfAllOutings();
@@ -49,7 +49,7 @@ namespace OutingsTest
         {
             var outingRepo = new OutingRepo();
             decimal totalSumBefore = 0;
-            Outings outing = new Outings(EventType.Golf, 12345);
+            OutingEvent outing = new OutingEvent(EventType.Golf, 12345);
             outingRepo._outingsList.Add(outing);
 
             outingRepo.CombinedCostOfAllOutingsByType(EventType.Golf);
